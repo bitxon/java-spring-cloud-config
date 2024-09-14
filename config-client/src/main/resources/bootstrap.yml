@@ -1,3 +1,5 @@
+# ✅ - for cloud config
+# 💚 - for cloud bus & kafka
 spring:
   application:
     name: user-service            # ✅ must match folder name in config server
@@ -8,6 +10,14 @@ spring:
       label: main                 # ✅ Git label/branch-name
       uri: http://localhost:8888  # ✅ URL for config server
       fail-fast: true
+    bus:
+      trace.enabled: true                            # 💚 Enable tracing
+      refresh.enabled: true                          # 💚 Enable refresh events
+      env.enabled: true                              # 💚 Enable busenv endpoint
+    stream:
+      kafka.binder.brokers: localhost:9092           # 💚 Kafka host for config refresh events
+      default.group: "user-service.${random.uuid}"   # 💚 Each instance must have unique group
+
 logging:
   level:
     org.springframework.cloud.config: TRACE

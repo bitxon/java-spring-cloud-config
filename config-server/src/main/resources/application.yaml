@@ -3,7 +3,14 @@ server:
 spring:
   application.name: config-server
   profiles:
-    default: composite,classpath
+    default: composite,file
+  kafka:
+    bootstrap-servers: localhost:9092
+  cloud:
+    bus:
+      enabled: true
+    stream:
+      default.group: "config-server.${random.uuid}"     # Each instance must have unique group
 
 logging:
   level:
