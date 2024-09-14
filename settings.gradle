@@ -1,1 +1,4 @@
 rootProject.name = 'java-spring-cloud-config'
+
+include 'config-server'
+include 'config-client'

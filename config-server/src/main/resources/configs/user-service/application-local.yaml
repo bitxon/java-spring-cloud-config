@@ -1,0 +1,4 @@
+# Properties of 'user-service' for 'local' env
+
+message:
+  env: "Local Env"

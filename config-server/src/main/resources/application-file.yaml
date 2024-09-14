@@ -1,0 +1,11 @@
+base-path: ${user.home}/Dev/java-spring-cloud-config/config-server/src/main/resources
+
+spring:
+  cloud:
+    config:
+      server:
+        composite:
+          - type: native
+            search-locations:
+              - file:///${base-path}/configs
+              - file:///${base-path}/configs/{application}

@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: user-service            # ✅ must match folder name in config server
+  profiles:
+    default: local                # ✅ must match suffix application-{suffix}.yaml in config server
+  cloud:
+    config:
+      label: main                 # ✅ Git label/branch-name
+      uri: http://localhost:8888  # ✅ URL for config server
+      fail-fast: true
+logging:
+  level:
+    org.springframework.cloud.config: TRACE

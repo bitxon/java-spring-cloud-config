@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    config:
+      server:
+        composite:
+          - type: native
+            search-locations:
+              - classpath:/configs
+              - classpath:/configs/{application}

@@ -1,0 +1,4 @@
+# Properties of 'user-service' for all env
+
+message:
+  service: "User Service"

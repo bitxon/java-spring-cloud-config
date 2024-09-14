@@ -1,0 +1,6 @@
+# Properties for all applications
+
+message:
+  global: "Hello World"
+  service:
+  env:

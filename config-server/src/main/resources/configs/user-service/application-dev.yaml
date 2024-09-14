@@ -1,0 +1,4 @@
+# Properties of 'user-service' for 'dev' env
+
+message:
+  env: "Dev Env"
